@@ -1,10 +1,10 @@
 import React, {useEffect} from "react";
 import Account from "../account";
-import './accountClassification.scss'
 import Button from '../Button'
 import { useAppSelector, useAppDispatch } from '../../../app/hooks';
 import { setTag, selectTag} from "../accountSlice";
 import { userFetchAction } from "../actions";
+import './main.scss'
 
 
 const Main = () =>{
@@ -36,12 +36,13 @@ const Main = () =>{
                              dispatch(setTag(c))
                              dispatch(userFetchAction())
                         }}
-                        >{c}</Button>
+                        >
+                        {c}
+                        </Button>
                     </div>
                     )
                }
                
-               {/* <p>{{</p> */}
             </div>
             <div className="previus">
                 {tag && <h4>تگ اکانت قبلی: {tag}</h4>}
